@@ -1,0 +1,30 @@
+<%= form_for(@deposits_product) do |f| %>
+  <% if @deposits_product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@deposits_product.errors.count, "error") %> prohibited this deposits_product from being saved:</h2>
+
+      <ul>
+      <% @deposits_product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   <div class="field">
+    <%= f.label :deposit_id, "Deposito" %>*<br>
+    <%= f.select :deposit_id, options_for_select(Deposit.all.pluck(:nombre,:id))%>
+  </div>
+    <div class="field">
+    <%= f.label :product_id, "Producto" %>*<br>
+    <%= f.select :product_id, options_for_select(Product.all.pluck(:nombre,:id))%>
+  </div>
+
+  <div class="field">
+    <%= f.label :cantidad %><br>
+    <%= f.number_field :cantidad %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

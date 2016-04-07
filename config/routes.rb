@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :deposits_products
+
+  resources :products
+
+  resources :stores
+
+  resources :deposits
+
+  resources :categories
+
   resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.
