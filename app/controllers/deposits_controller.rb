@@ -1,5 +1,5 @@
 class DepositsController < ApplicationController
-  before_action :set_deposit, only: [:show, :edit, :update, :destroy]
+  before_action :set_deposit, only: [:show, :edit, :update, :destroy,:products]
 
   # GET /deposits
   # GET /deposits.json
@@ -61,6 +61,9 @@ class DepositsController < ApplicationController
     end
   end
 
+  def products
+    @products = @deposit.products
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_deposit
