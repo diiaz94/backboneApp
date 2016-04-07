@@ -69,6 +69,6 @@ class DepositsProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def deposits_product_params
-      params.require(:deposits_product).permit(:cantidad,:deposit_id,:product_id)
+      params.require(:deposits_product).permit(:cantidad,:deposit_id,:product_id,:precio)
     end
 end

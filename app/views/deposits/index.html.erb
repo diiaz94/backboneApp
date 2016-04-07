@@ -5,7 +5,7 @@
     <tr>
       <th>Nombre</th>
       <th>Descripcion</th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
@@ -14,6 +14,7 @@
       <tr>
         <td><%= deposit.nombre %></td>
         <td><%= deposit.descripcion %></td>
+        <td><%= link_to 'Productos', depositproducts_path(deposit) %></td>
         <td><%= link_to 'Show', deposit %></td>
         <td><%= link_to 'Edit', edit_deposit_path(deposit) %></td>
         <td><%= link_to 'Destroy', deposit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
