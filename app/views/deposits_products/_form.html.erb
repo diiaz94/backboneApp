@@ -11,11 +11,11 @@
     </div>
   <% end %>
 
-   <div class="field">
+  <div class="field">
     <%= f.label :deposit_id, "Deposito" %>*<br>
     <%= f.select :deposit_id, options_for_select(Deposit.all.pluck(:nombre,:id))%>
   </div>
-    <div class="field">
+  <div class="field">
     <%= f.label :product_id, "Producto" %>*<br>
     <%= f.select :product_id, options_for_select(Product.all.pluck(:nombre,:id))%>
   </div>
