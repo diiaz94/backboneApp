@@ -4,6 +4,7 @@ class CreateDepositsProducts < ActiveRecord::Migration
       t.integer :cantidad
       t.belongs_to :deposit, index:true
       t.belongs_to :product, index:true
+      t.float :precio
       t.timestamps
     end
   end

@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20160407040440) do
     t.integer  "cantidad"
     t.integer  "deposit_id"
     t.integer  "product_id"
+    t.float    "precio"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
